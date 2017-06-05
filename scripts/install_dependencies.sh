@@ -29,7 +29,7 @@ install_gpp() {
 
 install_cmake() {
     wget 'https://cmake.org/files/v3.6/cmake-3.6.2-Linux-x86_64.sh'
-    sh cmake-3.6.2-Linux-x86_64.sh
+    sh cmake-3.6.2-Linux-x86_64.sh --skip-license
     echo 'export PATH="$PATH:$HOME/cmake-3.6.2-Linux-x86_64/bin"' >> ~/.bash_path
 }
 
