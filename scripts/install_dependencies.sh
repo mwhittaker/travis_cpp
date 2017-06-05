@@ -9,7 +9,6 @@ install_clang() {
     sudo bash -c "echo 'deb-src http://apt.llvm.org/trusty/ llvm-toolchain-trusty-3.9 main' >> /etc/apt/sources.list"
     wget -O - http://apt.llvm.org/llvm-snapshot.gpg.key | sudo apt-key add -
     sudo apt-get -y update
-    sudo apt-get -y upgrade
 
     sudo apt-get install -y \
         clang-3.9 clang-format-3.9 clang-tidy-3.9 lldb-3.9
@@ -35,9 +34,11 @@ install_cmake() {
 }
 
 main() {
+    set -x
     install_clang
     install_gpp
     install_cmake
+    set +x
 }
 
 main
