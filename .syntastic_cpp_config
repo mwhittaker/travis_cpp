@@ -1,0 +1,13 @@
+-std=c++14
+-Wall
+-Wextra
+-Werror
+-pedantic
+-Ibuild
+-Isrc
+-Ibuild/vendor/googlebenchmark/src/googlebenchmark/include
+-Ibuild/vendor/googlelog/src/googlelog/src
+-Ibuild/vendor/googletest/src/googletest/googlemock/include
+-Ibuild/vendor/googletest/src/googletest/googletest/include
+-Ibuild/vendor/zeromqcpp/zeromqcpp-prefix/src/zeromqcpp
+-Ibuild/vendor/zeromq/src/zeromq/include
