@@ -7,5 +7,7 @@ before_script:
 - export PATH="/usr/bin:$PATH"
 - ./scripts/print_diagnostics.sh
 script:
-- rm -rf build && ./scripts/build.sh Debug   1 && (cd build && make test)
-- rm -rf build && ./scripts/build.sh Release 1 && (cd build && make test)
+- rm -rf build && ./scripts/build.sh "$TEST_TYPE" 1 && (cd build && make test)
+env:
+- TEST_TYPE=Debug
+- TEST_TYPE=Release
