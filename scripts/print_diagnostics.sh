@@ -7,6 +7,7 @@ main() {
 
     echo "$CC"
     echo "$CXX"
+    echo "$PATH"
     which clang
     which clang++
     clang --version
