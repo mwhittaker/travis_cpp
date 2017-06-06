@@ -5,6 +5,7 @@ install:
 - ./scripts/install_dependencies.sh
 before_script:
 - ./scripts/print_diagnostics.sh
+- export PATH="/usr/bin:$PATH"
 script:
 - rm -rf build && ./scripts/build.sh Debug   1 && (cd build && make test)
 - rm -rf build && ./scripts/build.sh Release 1 && (cd build && make test)
